@@ -1,16 +1,38 @@
-# Amplitude Script To Trigger Event + Properties
+# Amplitude Script to Trigger Event + Properties
 
-Quick & easy Google Apps Script to trigger a list of events (held within a Google Sheet) to a specified Amplitude project. It was originally designed to trigger Marketing Costs to an Amplitude project but it can be easily modified to trigger more distinct events too.
+Easily trigger a list of events (stored in a Google Sheet) to a specified Amplitude project using this Google Apps Script. Originally designed for Marketing Costs, this script can be adapted for other events as well.
 
 ## Quick Explanation
-* The script to trigger events & event properties to Amplitude (note: it pulls ALL of it's data from whichever Google Sheet the script is attached to, and it will expose a new menu item called "Amplitude Trigger" which should be used to manually initiate the event trigger. Each line item in the sheet is equivalent to 1 distinct event with it's attached properties.
-* The intended goal is to assign 1 marketing cost (or event + relevant event properties) to each individual row, validate the data, and then trigger the script to push all the data to Amplitude. The "Timestamp" column can be left blank if you are not triggering backdated data. 
 
-## Steps to use this script
-1. Create a new Google Sheet
-2. Copy/import the data from the sample Google Sheet
-3. Click on Extensions > Apps Script [it will open script.google.com]
-4. Copy the code from Code.gs from this repository into the Code.gs that opened in step 3
-5. Replace `[AMPLITUDE_PROJECT_API_KEY]` with the API key of the project you want to send events to.
-6. Save the script.
-7. Go to the Google Sheet that you created in Step 1 and refresh the page. You should see a new menu item appear in the menu bar called "Amplitude Trigger". When you run it for the first time, you'll have to agree to provide the necessary permissions in order for the script to work as intended.
+This script sends events and event properties to Amplitude, using data from a Google Sheet. After setting up, a new menu item called "Amplitude Trigger" will appear in the menu bar. Use this to manually send each row in the sheet as a distinct event to Amplitude.
+
+## Steps to Use This Script
+
+1. **Create a Google Sheet**
+   - Open Google Sheets and create a new spreadsheet.
+
+2. **Import Sample Data (Optional)**
+   - You can import the data from the sample "Marketing Cost Tracker.csv" provided in this repository to get started quickly.
+
+3. **Set Up the Google Apps Script**
+   - In your Google Sheet, click on `Extensions` > `Apps Script`.
+   - Delete any code in the script editor that opens.
+   - Copy the content of `Code.gs` from this repository and paste it into the script editor.
+   - Replace `[AMPLITUDE_PROJECT_API_KEY]` in the script with the API key of the Amplitude project where you want to send the events.
+   - Click `File` > `Save` to save your script.
+
+4. **Refresh the Google Sheet**
+   - Go back to your Google Sheet and refresh the page.
+   - A new menu item called "Amplitude Trigger" should appear in the menu bar.
+
+5. **Prepare Your Data**
+   - Populate the Google Sheet with the events and associated properties you want to send to Amplitude. 
+   - You can customize the columns for each event, but remember to modify the script accordingly to handle any changes.
+
+6. **Trigger Events**
+   - Once your data is ready, click on the "Amplitude Trigger" menu and select the option to start the event trigger process.
+   - This will send each row in the sheet to Amplitude as a distinct event.
+
+7. **Validate Your Data**
+   - Make sure to verify the data you’ve sent to Amplitude.
+   - It’s recommended to first test in your Amplitude "Development" environment before sending events to production.
