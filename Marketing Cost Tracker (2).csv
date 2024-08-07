@@ -1,0 +1,3 @@
+Timestamp,User_id,Event_name,Channel,Investment,Impressions,Clicks,Conversions,Vendor,Group,Cost Owner
+[Trigger Date of event],marketing_cost_user__doNOTuse,[Event Name Here],Apple,"₹4,000.00",10000,10,1,Vendor1,AGENCY,Stakeholder1
+[Trigger Date of event],marketing_cost_user__doNOTuse,[Event Name Here],Whatsapp,"₹4,000.00",10000,10,1,Vendor2,TOOLS,Stakeholder2
