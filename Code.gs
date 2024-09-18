@@ -1,7 +1,9 @@
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
+  // Create a custom menu with items for triggering events and creating/retrieving the Amplitude sheet
   ui.createMenu('Amplitude Trigger')
       .addItem('Trigger Events', 'showConfirmationDialog')
+      .addItem('Create/Retrieve Amplitude Sheet', 'createNewSheetDialog')
       .addToUi();
 }
 
