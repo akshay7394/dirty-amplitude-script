@@ -38,6 +38,9 @@ function triggerAmplitudeEventsFromSheet() {
   for (var i = 1; i < data.length; i++) {
     var row = data[i];
     
+    // Extract the timestamp from column A 
+    var timestamp = row[0] ? new Date(row[0]).getTime() : null;
+
     // Convert currency (e.g., "₹4,000.00") to a float
     var investmentString = String(row[4]);
     var investmentFloat = parseFloat(investmentString.replace(/[^0-9.-]+/g,""));
@@ -56,6 +59,11 @@ function triggerAmplitudeEventsFromSheet() {
         }
       }]
     };
+    
+    // Include the timestamp if it's not null
+    if (timestamp) {
+      eventData.events[0].time = timestamp;
+    }
     
     var options = {
       "method": "post",
