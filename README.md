@@ -29,10 +29,11 @@ This script sends events and event properties to Amplitude, using data from a Go
 
 4. **Run the script for the first time**
 
-   - Back at the Google Script, replace `[AMPLITUDE_PROJECT_API_KEY]` in `Code.gs` with the API key of the Amplitude project where you want to send the events.
-   - Click on the `Save` icon to save your script.
+   - Open the `init.gs` file.
    - Click on the `Run` icon to run your script.
-   - Check your email, you would've received the
+   - Next, go to the `Code.gs` file and replace `[AMPLITUDE_PROJECT_API_KEY]` in `Code.gs` with the API key of the Amplitude project where you want to send the events.
+   - Click on the `Save` icon to save your script.
+   - Check your email, by now you would've received an email with a link to the newly-created Google Sheet.
 
 5. **Prepare Your Data**
 
