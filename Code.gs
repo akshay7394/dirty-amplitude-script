@@ -1,3 +1,5 @@
+// Reverted to manual sheet creation instead of auto-creation of gsheet
+
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu('Amplitude Trigger')
