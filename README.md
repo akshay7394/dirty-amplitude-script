@@ -8,32 +8,26 @@ This script sends events and event properties to Amplitude, using data from a Go
 
 ## Steps to Use This Script
 
-1. **Create a Google Script**
+1. **Create a Google Sheet**
 
-   - Click here to jump straight into creating a new Google Script - https://script.new
+   - Open Google Sheets and create a new spreadsheet.
 
-2. **Set up the Google Apps Script**
+2. **Import Sample Data (Optional)**
 
-   - Delete any code in the script editor.
-   - Create 2 new files:
-     - `Code.gs`
-     - `init.gs`
-   - Replace the content of `Code.gs` with the contents of `Code.gs` from this repository and paste it into the script editor.
-   - Replace the content of `init.gs` with the contents of `init.gs` from this repository and paste it into the script editor.
+   - You can import the data from the sample `Marketing Cost Tracker.csv` provided in this repository to get started quickly.
 
-3. **Configure your script's connection to Amplitude**
+3. **Set Up the Google Apps Script**
 
-   - Set up "HTTP API" as a new Source in your Amplitude instance.
-     - You can Use Amplitude's helpful [HTTP API Quick Start](https://amplitude.com/docs/apis/analytics/http-api-quickstart) guide.
-     - Once done, navigate back to the Script you were creating.
+   - In your Google Sheet, click on `Extensions` > `Apps Script`.
+   - Delete any code in the script editor that opens.
+   - Copy the content of `Code.gs` from this repository and paste it into the script editor.
+   - Replace `[AMPLITUDE_PROJECT_API_KEY]` in the script with the API key of the Amplitude project where you want to send the events.
+   - Click `File` > `Save` to save your script.
 
-4. **Run the script for the first time**
+4. **Refresh the Google Sheet**
 
-   - Open the `init.gs` file.
-   - Click on the `Run` icon to run your script.
-   - Next, go to the `Code.gs` file and replace `[AMPLITUDE_PROJECT_API_KEY]` in `Code.gs` with the API key of the Amplitude project where you want to send the events.
-   - Click on the `Save` icon to save your script.
-   - Check your email, by now you would've received an email with a link to the newly-created Google Sheet.
+   - Go back to your Google Sheet and refresh the page.
+   - A new menu item called "Amplitude Trigger" should appear in the menu bar.
 
 5. **Prepare Your Data**
 
@@ -43,7 +37,7 @@ This script sends events and event properties to Amplitude, using data from a Go
 6. **Trigger Events**
 
    - Once your data is ready, click on the "Amplitude Trigger" menu and select the option to start the event trigger process.
-   - **\*❗️NOTE:** This will send each row in the sheet to Amplitude as a distinct event. If you're triggering a test event, make sure to name it something descriptive that you can delete later.\*
+   - This will send each row in the sheet to Amplitude as a distinct event.
 
 7. **Validate Your Data**
    - Make sure to verify the data you’ve sent to Amplitude.
